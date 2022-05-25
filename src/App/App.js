@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import ReservationsAll from '../ReservationsAll.js'
+import Reservation from '../Reservation.js'
 
 class App extends Component {
 
@@ -13,7 +15,7 @@ class App extends Component {
   componentDidMount = () => {
     fetch('http://localhost:3001/api/v1/reservations')
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => this.setState({ allReservations: data }))
   }
 
 
@@ -27,7 +29,7 @@ class App extends Component {
 
         </div>
         <div className='resy-container'>
-
+          {this.state.allReservations && <ReservationsAll allReservations={this.state.allReservations} />}
         </div>
       </div>
     )
