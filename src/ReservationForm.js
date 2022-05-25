@@ -51,21 +51,21 @@ class ReservationForm extends Component {
      <form className="reservation-form" onSubmit={this.handleSubmit}>
        <label>
          Name:
-         <input name="name" type="text" value={this.state.name} onChange={this.handleChange} />
+         <input name="name" className="name-input" type="text" value={this.state.name} onChange={this.handleChange} />
        </label>
        <label>
          Date:
-         <input name="date" type="date" value={this.state.date} onChange={this.handleChange} />
+         <input name="date" className="date-input" type="date" value={this.state.date} onChange={this.handleChange} />
        </label>
        <label>
         Time:
-         <input name="time" type="time" value={this.state.time} onChange={this.handleChange} />
+         <input name="time" className="time-input" type="time" value={this.state.time} onChange={this.handleChange} />
        </label>
        <label>
          Guests:
-         <input name="guests" type="number" value={this.state.guests} onChange={this.handleChange} />
+         <input name="guests" className="guests-input" type="number" value={this.state.guests} onChange={this.handleChange} />
        </label>
-       <input type="submit" value="Make Reservation" onClick={() => {this.makeReservation(this.state.name, this.state.date, this.state.time, this.state.guests)}}/>
+       <input type="submit" className="make-reservation-input" value="Make Reservation" onClick={() => {this.makeReservation(this.state.name, this.state.date, this.state.time, this.state.guests)}}/>
      </form>
    );
  }
