@@ -1,0 +1,8 @@
+.single-reservation {
+  z-index: 1;
+  background-color: white;
+  color: black;
+  margin: 10px;
+  border: 2px solid turquoise;
+  width: 200px;
+}
